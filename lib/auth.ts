@@ -31,6 +31,8 @@ export const authConfig = {
         await db.user.create({
           data: {
             username: email,
+            name: profile?.name,
+            profilePicture: profile?.picture,
             provider: "Google",
             solWallet: {
               create: {
